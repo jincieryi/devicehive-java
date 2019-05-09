@@ -42,6 +42,7 @@ public class WebSocketExample {
                 .Builder()
                 .url(URL)
                 .build();
+        client.authenticate(TOKEN);
 
         DeviceWS deviceWS = client.createDeviceWS();
         deviceWS.setListener(new DeviceListener() {
